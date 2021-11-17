@@ -1,17 +1,17 @@
-(function($) {
-    $.fn.countdown = function(options, callback) {
+(function ($) {
+    $.fn.countdown = function (options, callback) {
 
         //custom 'this' selector
         thisEl = $(this);
 
         //array of custom settings
         var settings = {
-            'date': null,
-            'format': null
+            'date': '22/10/2021',
+            'format': 'dd/mm/yy'
         };
 
         //append the settings array to options
-        if(options) {
+        if (options) {
             $.extend(settings, options);
         }
 
@@ -20,7 +20,7 @@
 
             eventDate = Date.parse(settings['date']) / 1000;
             currentDate = Math.floor($.now() / 1000);
-            if(eventDate <= currentDate) {
+            if (eventDate <= currentDate) {
                 return false;
             }
 
@@ -42,7 +42,7 @@
             if (seconds == 1) { thisEl.find(".timeRefSeconds").text("second"); } else { thisEl.find(".timeRefSeconds").text("seconds"); }
 
             //logic for the two_digits ON setting
-            if(settings['format'] == "on") {
+            if (settings['format'] == "on") {
                 days = (String(days).length >= 2) ? days : "0" + days;
                 hours = (String(hours).length >= 2) ? hours : "0" + hours;
                 minutes = (String(minutes).length >= 2) ? minutes : "0" + minutes;
@@ -50,7 +50,7 @@
             }
 
             //update the countdown's html values.
-            if(!isNaN(eventDate)) {
+            if (!isNaN(eventDate)) {
                 thisEl.find(".days").text(days);
                 thisEl.find(".hours").text(hours);
                 thisEl.find(".minutes").text(minutes);
@@ -68,4 +68,4 @@
         interval = setInterval(countdown_proc, 1000);
 
     }
-}) (jQuery);
+})(jQuery);
