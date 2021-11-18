@@ -1592,10 +1592,10 @@ header.headerAnimate {
   -webkit-transition: all 0.5s linear 0s;
   -ms-transition: all 0.5s linear 0s;
   -o-transition: all 0.5s linear 0s;
-  height: 30px;
+  height: 90px;
 }
 .tz-header1.headerAnimate .tzlogo a img {
-  height: 45px;
+  height: 60px;
 }
 .headerAnimate .tznav-menu {
   padding: 0;
@@ -12679,4 +12679,10 @@ body.theme-rtl
 .tp-caption .tzbtn_slider:hover {
   background: #444;
   color: #fff;
+}
+
+.robo-tec {
+  color: #fff;
+  font-size: 20px;
+  font-weight: bolder;
 }

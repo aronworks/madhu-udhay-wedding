@@ -109,6 +109,10 @@ jQuery(document).ready(function () {
         if (myVideo.paused)
             myVideo.play();
 
+        document.getElementById("power_of_love").innerHTML = " "
+
+        console.log("lllllllllllllllll");
+
     });
     jQuery('.tzpause').on("click", function () {
         jQuery(this).hide();
