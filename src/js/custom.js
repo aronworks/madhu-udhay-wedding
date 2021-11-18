@@ -109,7 +109,7 @@ jQuery(document).ready(function () {
         if (myVideo.paused)
             myVideo.play();
 
-        document.getElementById("power_of_love").innerHTML = " "
+        document.getElementById("power_of_love").style.opacity = 0;
 
         console.log("lllllllllllllllll");
 
