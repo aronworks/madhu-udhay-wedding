@@ -127,25 +127,32 @@ jQuery(document).ready(function () {
 
     });
 
-    /* Method for Quote */
-    jQuery(".tz-quote").owlCarousel({
-        items: 1,
-        itemsDesktop: [1199, 1],
-        itemsDesktopSmall: [979, 1],
-        itemsTablet: [768, 1],
-        itemsMobile: [479, 1],
-        slideSpeed: 500,
-        paginationSpeed: 800,
-        rewindSpeed: 1000,
-        autoPlay: false,
-        stopOnHover: false,
-        singleItem: false,
-        rewindNav: false,
-        pagination: false,
-        paginationNumbers: false,
-        itemsScaleUp: false
-    });
 
+
+    jQuery('.gallery').owlCarousel({
+        loop:true,
+        margin:10,
+        nav:false,
+        dots:false,
+        autoplay:true,
+        autoplayHoverPause:true,
+        slideSpeed: 500,
+        autoPlay: 2000,
+        navigation:false,
+        pagination:false,
+        stopOnHover: true,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:3
+            },
+            1000:{
+                items:5
+            }
+        }
+    })
 
     /* Accordion Toggle Items */
     jQuery('.tzaccordion-content:first').show();
@@ -160,37 +167,7 @@ jQuery(document).ready(function () {
 
 
 
-    /**
-     *  Method For Slider Blog
-     * -----------------------------------------------------------------------------
-     */
-    jQuery('.tzblog-slider-content').each(function () {
-        jQuery(this).owlCarousel({
-            items: 1,
-            itemsDesktop: [1199, 1],
-            itemsDesktopSmall: [979, 1],
-            itemsTablet: [768, 1],
-            itemsMobile: [479, 1],
-            slideSpeed: 500,
-            paginationSpeed: 800,
-            rewindSpeed: 1000,
-            autoPlay: false,
-            stopOnHover: false,
-            singleItem: false,
-            rewindNav: false,
-            pagination: false,
-            autoHeight: true,
-            paginationNumbers: false,
-            itemsScaleUp: false
-        });
-        var $_parent = jQuery(this);
-        $_parent.parent().find('.tz_slider_prev').on("click", function () {
-            $_parent.trigger('owl.prev');
-        });
-        $_parent.parent().find('.tz_slider_next').on("click", function () {
-            $_parent.trigger('owl.next');
-        });
-    });
+
     jQuery('#createaccount').on("click", function () {
         if (jQuery(this).is(":checked")) {
             jQuery('.create-account').css('visibility', 'visible');
