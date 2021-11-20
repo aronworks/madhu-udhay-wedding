@@ -3000,6 +3000,17 @@ div.wpcf7-validation-errors {
   right: 0;
   overflow: hidden;
 }
+@media (max-width: 768px) {
+  .videoID {
+    max-width: none;
+    min-width: none;
+    max-height: none;
+    min-width: none;
+    width: 100%;
+    height: auto;
+    top: 0px;
+  }
+}
 .bg-video {
   z-index: 6;
 }
@@ -9683,7 +9694,7 @@ div.wpcf7-response-output {
   margin-top: 28px;
 }
 .tzwidget-contact address {
-  font-size: 14px;
+  font-size: 18px;
   line-height: 35px;
   color: #ffffff;
   text-align: center;
@@ -9692,7 +9703,7 @@ div.wpcf7-response-output {
   padding: 0;
 }
 .tzwidget-contact span {
-  font-size: 14px;
+  font-size: 18px;
   line-height: 35px;
   color: #ffffff;
   text-align: center;
