@@ -2097,6 +2097,7 @@ nav .themeple_custom_menu_mega_menu.themeple_mega5 ul li ul li {
 }
 .tzcountdown-left {
   padding-top: 15px;
+  text-align: center;
 }
 .tzcountdown-icon {
   color: #fff;
@@ -2105,10 +2106,12 @@ nav .themeple_custom_menu_mega_menu.themeple_mega5 ul li ul li {
   padding: 25px 0 0;
   margin: 0;
   display: block;
-  float: left;
+  /* float: left; */
+  float: none;
 }
 .tzcountdown-ds {
-  padding-left: 63px;
+  /* padding-left: 63px; */
+  padding-left: 0px;
   font-size: 14px;
   line-height: 30.8px;
   color: #fff;
@@ -11888,9 +11891,9 @@ body.theme-rtl
   .tzcountdown-ds {
     padding-left: 0;
   }
-  .tzcountdown-icon {
+  /* .tzcountdown-icon {
     float: none;
-  }
+  } */
   .tzcountdown-left {
     text-align: center;
   }
